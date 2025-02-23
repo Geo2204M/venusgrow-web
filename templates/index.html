@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main-content">
+    <!-- Hero Section -->
+    <section id="intro" class="hero-section py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-4 mb-4 fw-bold">Bienvenido a VENUSGROW</h1>
+            <p class="lead mb-4">Descubre la belleza y fascinación de las plantas carnívoras cultivadas in vitro</p>
+            
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="about" class="about-section py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 mb-4">Sobre Nosotros</h2>
+                    <p class="lead">Venus Grow es un laboratorio especializado en el cultivo y venta de plantas carnívoras y especies exóticas. Nuestra objetivo es ofrecer plantas únicas y de alta calidad, junto con el conocimiento necesario para su cuidado.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{{ url_for('static', filename='laboratorio.png') }}" alt="Laboratorio" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="products" class="products-section py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 display-5">Nuestras Plantas Carnívoras</h2>
+            <div id="productCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ url_for('static', filename='imagen1.png') }}" class="d-block w-100 mx-auto" alt="Planta 1">
+                        <div class="text-center mt-2">
+                            <h5>Venus atrapamoscas</h5>
+                            <p>Descripción breve de la planta 1.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ url_for('static', filename='imagen2.png') }}" class="d-block w-100 mx-auto" alt="Planta 2">
+                        <div class="text-center mt-2">
+                            <h5>Planta de jarra</h5>
+                            <p>Descripción breve de la planta 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#productCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#productCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </a>
+            </div>
+        </div>
+        <div class="ver-mas-container text-center py-5">
+            <a href="{{ url_for('products') }}" class="button">Ver más...</a>
+        </div>
+        
+    </section>
+</main>
+{% endblock %}

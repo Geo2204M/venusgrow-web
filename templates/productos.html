@@ -2,41 +2,135 @@
 
 {% block content %}
 <main class="container py-5">
-    <h1 class="text-center mb-5">Nuestros Productos</h1>
+    <h1 class="text-left mb-5">Catalogo de plantas</h1>
+    <h2 class="text-center mb-5">Plantas Carnívoras</h2>
     <div class="row">
         <!-- Producto 1 -->
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card" id="venus">
                 <img src="{{ url_for('static', filename='Imagen1.png') }}" class="card-img-top" alt="Venus atrapamoscas">
                 <div class="card-body">
                     <h5 class="card-title">Venus atrapamoscas (Dionaea muscipula)</h5>
-                    <p class="card-text">Descripción breve de la planta. Ideal para principiantes.</p>
+                    <p class="card-text">Planta fascinante con trampas activas que se cierran rápidamente al detectar presas. Perfecta para entusiastas de lo exótico</p>
                     <a href="#" class="button">Ver Detalles</a>
                 </div>
             </div>
         </div>
         <!-- Producto 2 -->
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card" id="jarra">
                 <img src="{{ url_for('static', filename='Imagen2.png') }}" class="card-img-top" alt="Planta de jarra">
                 <div class="card-body">
                     <h5 class="card-title">Planta de jarra (Cephalotus)</h5>
-                    <p class="card-text">Descripción breve de la planta. Perfecta para terrarios.</p>
+                    <p class="card-text">Pequeñas jarras en forma de copa que atraen insectos con néctar y los digieren lentamente. Única y de bajo mantenimiento.</p>
                     <a href="#" class="button">Ver Detalles</a>
                 </div>
             </div>
         </div>
         <!-- Producto 3 -->
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card" id="rocio">
                 <img src="{{ url_for('static', filename='Imagen3.png') }}" class="card-img-top" alt="Gotas de Rocio">
                 <div class="card-body">
                     <h5 class="card-title">Gotas de Rocio (Drosera espátulata)</h5>
-                    <p class="card-text">Descripción breve de la planta. Ideal para climas húmedos.</p>
+                    <p class="card-text">Sus hojas pegajosas brillan con gotas que atrapan insectos. Fácil de cuidar y perfecta para principiantes en el mundo de las carnívoras.</p>
                     <a href="#" class="button">Ver Detalles</a>
                 </div>
             </div>
         </div>
+        <!-- Producto 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card" id="orejita">
+                <img src="{{ url_for('static', filename='Imagen4.png') }}" class="card-img-top" alt="Orejita">
+                <div class="card-body">
+                    <h5 class="card-title">Orejita (Pinguicola debertiana)</h5>
+                    <p class="card-text">Sus hojas pegajosas atrapan insectos pequeños, ayudándola a obtener nutrientes. Además, es fácil de cuidar y produce hermosas flores.</p>
+                    <a href="#" class="button">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center mb-5">Plantas de vivero</h2>
+    <div class="row">
+            <!-- Producto 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" id="lavanda">
+                    <img src="{{ url_for('static', filename='Imagen6.png') }}" class="card-img-top" alt="Lavanda">
+                    <div class="card-body">
+                        <h5 class="card-title">Lavanda</h5>
+                        <p class="card-text">Planta aromática de fácil cuidado, conocida por su fragancia relajante y propiedades medicinales. Ideal para jardines y macetas</p>
+                        <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalLavanda">Ver Detalles</a>
+                    </div>
+                </div>
+                <!-- Modal Lavanda -->
+<div class="modal fade" id="modalLavanda" tabindex="-1" aria-labelledby="modalLavandaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLavandaLabel">Lavanda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen6.png') }}" class="img-fluid mb-3" alt="Lavanda">
+                <p>🌿 **Lavanda**: Planta aromática con propiedades relajantes. Sus flores violetas atraen polinizadores y requieren poco mantenimiento.</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" id="romero">
+                    <img src="{{ url_for('static', filename='Imagen7.jpg') }}" class="card-img-top" alt="Romero">
+                    <div class="card-body">
+                        <h5 class="card-title">Romero</h5>
+                        <p class="card-text">Arbusto perenne con hojas aromáticas que se usa en la cocina y la medicina. Resistente y perfecto para climas cálidos.</p>
+                        <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalRomero">Ver Detalles</a>
+
+                    </div>
+                </div>
+                <!-- Modal Romero -->
+<div class="modal fade" id="modalRomero" tabindex="-1" aria-labelledby="modalRomeroLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRomeroLabel">Romero</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen7.jpg') }}" class="img-fluid mb-3" alt="Romero">
+                <p>🌿 **Romero**: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <!-- Producto 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card " id="helecho">
+                    <img src="{{ url_for('static', filename='Imagen8.jpg') }}" class="card-img-top" alt="Helecho">
+                    <div class="card-body">
+                        <h5 class="card-title">Helecho</h5>
+                        <p class="card-text">Planta ornamental de hojas frondosas que prospera en ambientes húmedos y sombreados. Ideal para interiores y jardines tropicales.</p>
+                        <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalHelecho">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Helecho -->
+<div class="modal fade" id="modalHelecho" tabindex="-1" aria-labelledby="modalHelechoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalHelechoLabel">Helecho</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen8.jpg') }}" class="img-fluid mb-3" alt="Helecho">
+                <p>🌿 **Helecho**: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 </main>
 {% endblock %}

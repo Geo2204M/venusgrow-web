@@ -7,8 +7,8 @@ def home():
     return render_template('index.html')
 
 @app.route('/')
-def products():
-    return render_template('products.html')
+def productos():
+    return render_template('productos.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

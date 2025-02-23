@@ -1,31 +1,42 @@
 {% extends "base.html" %}
 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VENUSGROW - Productos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Productos de VENUSGROW</h1>
-        <nav>
-            <a href="/">Inicio</a>
-            <a href="/about">Sobre Nosotros</a>
-            <a href="/products">Productos</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Nuestras Plantas Carnívoras</h2>
-        <ul>
-            <li>Planta 1</li>
-            <li>Planta 2</li>
-            <li>Planta 3</li>
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2025 VENUSGROW. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+{% block content %}
+<main class="container py-5">
+    <h1 class="text-center mb-5">Nuestros Productos</h1>
+    <div class="row">
+        <!-- Producto 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='Imagen1.png') }}" class="card-img-top" alt="Venus atrapamoscas">
+                <div class="card-body">
+                    <h5 class="card-title">Venus atrapamoscas (Dionaea muscipula)</h5>
+                    <p class="card-text">Descripción breve de la planta. Ideal para principiantes.</p>
+                    <a href="#" class="button">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='Imagen2.png') }}" class="card-img-top" alt="Planta de jarra">
+                <div class="card-body">
+                    <h5 class="card-title">Planta de jarra (Cephalotus)</h5>
+                    <p class="card-text">Descripción breve de la planta. Perfecta para terrarios.</p>
+                    <a href="#" class="button">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='Imagen3.png') }}" class="card-img-top" alt="Gotas de Rocio">
+                <div class="card-body">
+                    <h5 class="card-title">Gotas de Rocio (Drosera espátulata)</h5>
+                    <p class="card-text">Descripción breve de la planta. Ideal para climas húmedos.</p>
+                    <a href="#" class="button">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

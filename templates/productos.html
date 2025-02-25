@@ -8,35 +8,80 @@
         <!-- Producto 1 -->
         <div class="col-md-4 mb-4">
             <div class="card" id="venus">
-                <img src="{{ url_for('static', filename='Imagen1.png') }}" class="card-img-top" alt="Venus atrapamoscas">
+                <img src="{{ url_for('static', filename='Imagen1.png') }}" class="card-img-top" alt="Venus">
                 <div class="card-body">
                     <h5 class="card-title">Venus atrapamoscas (Dionaea muscipula)</h5>
                     <p class="card-text">Planta fascinante con trampas activas que se cierran rápidamente al detectar presas. Perfecta para entusiastas de lo exótico</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalVenus">Ver Detalles</a>
                 </div>
             </div>
+            <!-- Modal Venus -->
+<div class="modal fade" id="modalVenus" tabindex="-1" aria-labelledby="modalVenusLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalVenusLabel">Venus atrapamoscas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen1.png') }}" class="img-fluid mb-3" alt="Venus">
+                <p>**Dionaea muscipula**:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
         <!-- Producto 2 -->
         <div class="col-md-4 mb-4">
             <div class="card" id="jarra">
-                <img src="{{ url_for('static', filename='Imagen2.png') }}" class="card-img-top" alt="Planta de jarra">
+                <img src="{{ url_for('static', filename='Imagen2.png') }}" class="card-img-top" alt="Jarra">
                 <div class="card-body">
                     <h5 class="card-title">Planta de jarra (Cephalotus)</h5>
                     <p class="card-text">Pequeñas jarras en forma de copa que atraen insectos con néctar y los digieren lentamente. Única y de bajo mantenimiento.</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalJarra">Ver Detalles</a>
                 </div>
             </div>
+            <!-- Modal Jarra -->
+<div class="modal fade" id="modalJarra" tabindex="-1" aria-labelledby="modalJarraLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalJarraLabel">Planta de Jarra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen2.png') }}" class="img-fluid mb-3" alt="Jarra">
+                <p>**Cephalotus**: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
         <!-- Producto 3 -->
         <div class="col-md-4 mb-4">
             <div class="card" id="rocio">
-                <img src="{{ url_for('static', filename='Imagen3.png') }}" class="card-img-top" alt="Gotas de Rocio">
+                <img src="{{ url_for('static', filename='Imagen3.png') }}" class="card-img-top" alt="Rocio">
                 <div class="card-body">
                     <h5 class="card-title">Gotas de Rocio (Drosera espátulata)</h5>
                     <p class="card-text">Sus hojas pegajosas brillan con gotas que atrapan insectos. Fácil de cuidar y perfecta para principiantes en el mundo de las carnívoras.</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalRocio">Ver Detalles</a>
                 </div>
             </div>
+            <!-- Modal Rocio -->
+<div class="modal fade" id="modalRocio" tabindex="-1" aria-labelledby="modalRocioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRocioLabel">Gotas de rocio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen3.png') }}" class="img-fluid mb-3" alt="Rocio">
+                <p>**Drosera espátulata**: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
         <!-- Producto 4 -->
         <div class="col-md-4 mb-4">
@@ -45,10 +90,25 @@
                 <div class="card-body">
                     <h5 class="card-title">Orejita (Pinguicola debertiana)</h5>
                     <p class="card-text">Sus hojas pegajosas atrapan insectos pequeños, ayudándola a obtener nutrientes. Además, es fácil de cuidar y produce hermosas flores.</p>
-                    <a href="#" class="button">Ver Detalles</a>
+                    <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#modalOrejita">Ver Detalles</a>
                 </div>
             </div>
         </div>
+        <!-- Modal Orejita -->
+<div class="modal fade" id="modalOrejita" tabindex="-1" aria-labelledby="modalOrejitaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalOrejitaLabel">Orejita</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ url_for('static', filename='Imagen4.png') }}" class="img-fluid mb-3" alt="Orejita">
+                <p>🌿 **OrePinguicola debertiana**: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
     <h2 class="text-center mb-5">Plantas de vivero</h2>
     <div class="row">
